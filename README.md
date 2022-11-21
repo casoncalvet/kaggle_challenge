@@ -8,7 +8,7 @@
     - ##### Remove ID column since it is the same as the index
 
 
-![image info](./kaggle_challenge/ogcsv.png)
+![image info](./ogcsv.png)
 
 
 ##### Create Function for fetching unique values
@@ -36,7 +36,7 @@ df_test["clarity"]= df_test.clarity.map(clarity_dict)
 
 ### Normalizing data: 
 
-![hist](./kaggle_challenge/hist.png) 
+![hist](./hist.png) 
 
 #### Carat has outliers and no assumed normality, so must normalize the data 
 
@@ -45,7 +45,7 @@ df_train['carat'] = min_max.fit_transform(df_train['carat'].values.reshape(-1, 1
 ``` 
 
 ### Correlation Matrix to infer possible relationships to Price
-![corr](./kaggle_challenge/corr.png) 
+![corr](./corr.png) 
 
 
 # Step 2: 
@@ -144,4 +144,4 @@ X_train_filt, X_test_filt, y_train_filt, y_test_filt = train_test_split(X_filt, 
 # Step 5: 
 ## Test models against test dataframe with a 0.15 split
 
-![hist](./kaggle_challenge/kag.png) 
+![hist](./kag.png) 
